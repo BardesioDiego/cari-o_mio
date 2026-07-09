@@ -19,9 +19,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body class="homepage">
@@ -153,89 +152,6 @@
 
   <div class="preloader text-white fs-6 text-uppercase overflow-hidden"></div>
 
-  <div class="search-popup">
-    <div class="search-popup-container">
-
-      <form role="search" method="get" class="form-group" action="">
-        <input type="search" id="search-form" class="form-control border-0 border-bottom"
-          placeholder="Type and press enter" value="" name="s" />
-        <button type="submit" class="search-submit border-0 position-absolute bg-white"
-          style="top: 15px;right: 15px;"><svg class="search" width="24" height="24">
-            <use xlink:href="#search"></use>
-          </svg></button>
-      </form>
-
-      <h5 class="cat-list-title">Browse Categories</h5>
-
-      <ul class="cat-list">
-        <li class="cat-list-item">
-          <a href="#" title="Jackets">Jackets</a>
-        </li>
-        <li class="cat-list-item">
-          <a href="#" title="T-shirts">T-shirts</a>
-        </li>
-        <li class="cat-list-item">
-          <a href="#" title="Handbags">Handbags</a>
-        </li>
-        <li class="cat-list-item">
-          <a href="#" title="Accessories">Accessories</a>
-        </li>
-        <li class="cat-list-item">
-          <a href="#" title="Cosmetics">Cosmetics</a>
-        </li>
-        <li class="cat-list-item">
-          <a href="#" title="Dresses">Dresses</a>
-        </li>
-        <li class="cat-list-item">
-          <a href="#" title="Jumpsuits">Jumpsuits</a>
-        </li>
-      </ul>
-
-    </div>
-  </div>
-
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="My Cart">
-    <div class="offcanvas-header justify-content-center">
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="order-md-last">
-        <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-primary">Your cart</span>
-          <span class="badge bg-primary rounded-pill">3</span>
-        </h4>
-        <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Growers cider</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$12</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Fresh grapes</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$8</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Heinz tomato ketchup</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$5</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span>Total (USD)</span>
-            <strong>$20</strong>
-          </li>
-        </ul>
-
-        <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to Checkout</button>
-      </div>
-    </div>
-  </div>
 
   <nav class="navbar navbar-expand-lg bg-light text-uppercase fs-6 p-3 border-bottom align-items-center">
     <div class="container-fluid">
@@ -286,13 +202,11 @@
           </div>
         </div>
 
-        <div class="col-3 col-lg-auto">
-          <ul class="list-unstyled d-flex m-0">
-            <li class="d-none d-lg-block">
-              <a href="index.html" class="text-uppercase mx-3">Wishlist <span class="wishlist-count">(0)</span>
-              </a>
-            </li>
-          </ul>
+        <div class="col-lg-auto d-none d-lg-block">
+          <a href="https://www.instagram.com/carinomiouy/" target="_blank" class="btn-instagram">
+            <i class="bi bi-instagram"></i>
+            Seguinos en Instagram
+          </a>
         </div>
 
       </div>
@@ -303,11 +217,19 @@
   <section id="billboard" class="bg-light py-5">
     <div class="container">
       <div class="row justify-content-center">
-        <h1 class="section-title text-center" data-aos="fade-up">Baby Shower & After Baby Shower</h1>
-        <h4 class="section-title text-center" data-aos="fade-up">Servicio Integral</h4>
+        <h1 class="section-title text-center title-compact" data-aos="fade-up">Baby Shower & After Baby Shower</h1>
+        <h4 class="section-title text-center subtitle-tight" data-aos="fade-up"> <strong>Servicio Integral</strong>
+        </h4>
         <div class="col-md-6 text-center" data-aos="fade-up" data-aos-delay="300">
-          <p>En restaurante o a domicilio.<br> Una experiencia cuidada para celebrar sin preocupaciones.</p>
+          <p class="parrafo">En restaurante o a domicilio.<br> Una experiencia cuidada para celebrar sin preocupaciones.
+          </p>
         </div>
+        <div class="text-center mt-3" data-aos="fade-up" data-aos-delay="400">
+                  <a href="https://api.whatsapp.com/send?phone=59896301303&text=Hola%20quiero%20mas%20informacion"  target="_blank" class="btn-propuesta">
+                    <i class="bi bi-whatsapp"></i>
+                    Consultar propuesta
+                  </a>
+                </div>
       </div>
       <div class="row">
         <div class="swiper main-swiper py-4" data-aos="fade-up" data-aos-delay="600">
@@ -321,9 +243,9 @@
                 </div>
                 <div class="banner-content py-4">
                   <h5 class="element-title text-uppercase">
-                    <a href="index.html" class="item-anchor">Baby Shower & After Baby Shower</a>
+                    <a href="index.html" class="item-anchor titulo_nuevo">Baby Shower & After Baby Shower</a>
                   </h5>
-                  <p>Un encuentro durante la semana o fin de semana. Especial para celebrar la llegada del bebé.</p>
+                  <p class="parrafo">Un encuentro durante la semana o fin de semana. Especial para celebrar la llegada del bebé.</p>
                 </div>
               </div>
             </div>
@@ -336,9 +258,9 @@
                 </div>
                 <div class="banner-content py-4">
                   <h5 class="element-title text-uppercase">
-                    <a href="index.html" class="item-anchor">En Restaurante</a>
+                    <a href="index.html" class="item-anchor titulo_nuevo">En Restaurante</a>
                   </h5>
-                  <p>Una experiencia en un ambiente elegante, cálido y con servicio profesional.</p>
+                  <p class="parrafo">Una experiencia en un ambiente elegante, cálido y con servicio profesional.</p>
                 </div>
               </div>
             </div>
@@ -351,9 +273,9 @@
                 </div>
                 <div class="banner-content py-4">
                   <h5 class="element-title text-uppercase">
-                    <a href="index.html" class="item-anchor">A Domicilio</a>
+                    <a href="index.html" class="item-anchor titulo_nuevo">A Domicilio</a>
                   </h5>
-                  <p>Llevamos toda la experiencia a tu hogar. Montaje, merienda y decoración. Vos sólo disfrutás.</p>
+                  <p class="parrafo">Llevamos toda la experiencia a tu hogar. Montaje, merienda y decoración. Vos sólo disfrutás.</p>
                 </div>
               </div>
             </div>
@@ -376,7 +298,9 @@
           <div class="col-md-6 column-container bg-white">
             <div class="collection-content p-5 m-0 m-md-5">
               <h3 class="element-title text-uppercase">Un mimo para mamá</h3>
-              <p>Mientras otras celebraciones implican organizar, coordinar y preocuparse, en Cariño Mío solo tenés que llegar y disfrutar.<br>Creamos una experiencia integral de té a la mesa cálida, delicada y pensada para celebrar la llegada de tu bebé. En nuestros lugares seleccionados y a domicilio.</p>
+              <p>Mientras otras celebraciones implican organizar, coordinar y preocuparse, en Cariño Mío solo tenés que
+                llegar y disfrutar.<br>Creamos una experiencia integral de té a la mesa cálida, delicada y pensada para
+                celebrar la llegada de tu bebé. En nuestros lugares seleccionados y a domicilio.</p>
               <a href="#" class="btn btn-dark text-uppercase mt-3">Reservá tu lugar</a>
             </div>
           </div>
@@ -547,7 +471,8 @@
               <h5 class="post-title text-uppercase">
                 <a href="index.html">Revelación del Género</a>
               </h5>
-              <p>Transformá uno de los momentos más esperados del embarazo en una experiencia inolvidable. Sumale a tu baby shower, la revelación del género de tu bebé.</p>
+              <p>Transformá uno de los momentos más esperados del embarazo en una experiencia inolvidable. Sumale a tu
+                baby shower, la revelación del género de tu bebé.</p>
             </div>
           </article>
         </div>
@@ -562,7 +487,8 @@
               <h5 class="post-title text-uppercase">
                 <a href="index.html">Baby Shower Creativo</a>
               </h5>
-              <p>Armamos una experiencia completa a domicilio con decoración, merienda y materiales para personalizar prendas y accesorios del bebé. Una propuesta original para compartir, crear y celebrar.</p>
+              <p>Armamos una experiencia completa a domicilio con decoración, merienda y materiales para personalizar
+                prendas y accesorios del bebé. Una propuesta original para compartir, crear y celebrar.</p>
             </div>
           </article>
         </div>
@@ -577,7 +503,8 @@
               <h5 class="post-title text-uppercase">
                 <a href="index.html">Bautismos Integrales</a>
               </h5>
-              <p>Celebrá este momento tan especial sin preocuparte por la organización. Nos encargamos de la decoración, la ambientación y cada detalle para que vos y tu familia puedan disfrutar.</p>
+              <p>Celebrá este momento tan especial sin preocuparte por la organización. Nos encargamos de la decoración,
+                la ambientación y cada detalle para que vos y tu familia puedan disfrutar.</p>
             </div>
           </article>
         </div>
@@ -886,7 +813,7 @@
           <div class="col-md-6 text-end">
             <p>© Copyright 2022 Kaira. All rights reserved. Design by <a href="https://templatesjungle.com"
                 target="_blank">TemplatesJungle</a> Distribution By <a href="https://themewagon.com"
-              target="blank">ThemeWagon</a></p>
+                target="blank">ThemeWagon</a></p>
           </div>
         </div>
       </div>

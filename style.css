@@ -107,6 +107,15 @@ h6 {
   letter-spacing: 1px;
 }
 
+.title-compact {
+  margin-bottom: 0.2rem;
+  font-size: 45px;
+}
+
+.subtitle-tight {
+  margin-top: 0;
+}
+
 h1,
 .h1 {
   font-size: 4.5rem;
@@ -147,6 +156,20 @@ a {
   max-width: 1800px;
 }
 
+.parrafo {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  font-weight: 300; 
+  color: #52301a;
+}
+
+.titulo_nuevo {
+  margin-bottom: 1rem;
+  font-size: 1.10rem; 
+  font-weight: 450;
+  color: #52301a;
+}
 /* Dropdown */
 .dropdown-menu {
   --bs-dropdown-border-radius: 0;
@@ -402,6 +425,58 @@ a {
   }
 }
 
+.btn-instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 22px;
+    background-color: #5b3a22;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    transition: all .3s ease;
+    white-space: nowrap;
+    gap: 8px;
+}
+
+.btn-instagram:hover {
+    background-color: #71492c;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.btn-instagram:focus {
+    color: #fff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(91, 58, 34, .25);
+}
+
+.btn-propuesta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 34px;
+    background: #d88c9a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 999px;
+    border: none;
+    transition: all .3s ease;
+    box-shadow: 0 6px 18px rgba(217, 139, 152, .25);
+     gap: 8px;
+}
+
+.btn-propuesta:hover {
+    background: #c97886;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(217, 139, 152, .35);
+}
 
 /* swipe animation */
 .swipe-up {
@@ -1049,67 +1124,6 @@ a {
   }
 }
 
-/*--------------------------------------------------------------
-/** 7.9 Testimonial Slider
---------------------------------------------------------------*/
-.testimonials .section-title {
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.testimonial-swiper .testimonial-item blockquote {
-  font-size: 2.5em;
-}
-
-.testimonial-swiper .testimonial-item blockquote>p {
-  margin: 0;
-}
-
-.testimonials .review-title {
-  font-size: 14px;
-}
-
-.testimonial-swiper .swiper-slide {
-  opacity: 0.2;
-  width: 42% !important;
-}
-
-.testimonial-swiper.swiper-3d .swiper-slide-shadow-left,
-.testimonial-swiper.swiper-3d .swiper-slide-shadow-right {
-  background-image: none;
-}
-
-.testimonial-swiper .swiper-slide-active {
-  opacity: 1;
-}
-
-.testimonials .swiper-pagination {
-  left: 0;
-  right: 0;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background: #8C907E;
-}
-
-.swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  margin-right: 10px;
-}
-
-@media only screen and (max-width: 1199px) {
-  .testimonial-swiper .testimonial-item blockquote {
-    font-size: 1.8em;
-  }
-}
-
-@media only screen and (max-width: 999px) {
-  .testimonial-swiper .testimonial-item blockquote {
-    font-size: 1.2em;
-  }
-}
 
 
 /** 7.13 Instagram
