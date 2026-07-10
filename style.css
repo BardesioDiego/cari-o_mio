@@ -331,6 +331,12 @@ a {
   background-color: #eee5de !important;
 }
 
+.icono-servicio{
+    font-size: 38px;
+    color: #6f4b34;
+    display: inline-block;
+}
+
 /* slideshow */
 .slideshow {
   overflow: hidden;
