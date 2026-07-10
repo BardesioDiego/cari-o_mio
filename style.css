@@ -168,7 +168,7 @@ a {
   margin-bottom: 1rem;
   font-size: 1.10rem; 
   font-weight: 450;
-  color: #52301a;
+  color: #52301a !important;
 }
 
 .logo-navbar{
