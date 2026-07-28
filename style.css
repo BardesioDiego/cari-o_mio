@@ -171,6 +171,91 @@ a {
   color: #52301a !important;
 }
 
+@media (max-width: 767.98px) {
+  #billboard .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  #new-arrival .d-flex {
+    justify-content: center !important;
+  }
+  #new-arrival .d-flex h4 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.main-gallery-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 1100;
+  padding: 1rem;
+}
+
+.main-gallery-overlay.open {
+  display: flex;
+}
+
+.main-gallery-frame {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
+  text-align: center;
+}
+
+.main-gallery-image {
+  max-width: 100%;
+  max-height: 82vh;
+  width: auto;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.main-gallery-close,
+.main-gallery-btn {
+  position: absolute;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.main-gallery-close {
+  top: 1rem;
+  right: 1rem;
+}
+
+.main-gallery-prev {
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-gallery-next {
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-gallery-counter {
+  margin-top: 1rem;
+  color: #f5f5f5;
+  font-size: 0.95rem;
+}
+
 .logo-navbar{
     height: 50px;      /* Ajusta este valor según el tamaño que quieras */
     width: auto;
@@ -924,6 +1009,27 @@ a {
   }
   .swiper-pagination {
     position: relative;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: rgba(82, 48, 26, 0.28);
+    opacity: 1;
+    margin: 0 4px;
+    transition: background-color 0.2s ease;
+  }
+  .swiper-pagination-bullet-active {
+    background: #52301a;
+  }
+  .swiper-hint {
+    display: block;
+    text-align: center;
+    color: rgba(82, 48, 26, 0.7);
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    letter-spacing: 0.02em;
   }
 }
 
