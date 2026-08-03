@@ -22,14 +22,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    /* Mostrar paginación solo en móviles para la sección catálogo */
-    #catalogo .swiper-pagination { display: none; }
-    @media (max-width: 767.98px) {
-      #catalogo .swiper-pagination { display: block; text-align: center; margin-top: 12px; }
-      #catalogo .swiper-pagination .swiper-pagination-bullet { background: rgba(0,0,0,0.6); }
-    }
-  </style>
 </head>
 
 <body class="homepage">
@@ -199,19 +191,19 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 gap-1 gap-md-5 pe-3">
                 <li class="nav-item ">
-                  <a class="nav-link" href="#" id="Home">Inicio</a>
+                  <a class="nav-link" href="index.html" id="Home">Inicio</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="#" id="Shop">Servicios</a>
+                  <a class="nav-link" href="index.html#service" id="Shop">Servicios</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="#" id="Blog">Extras</a>
+                  <a class="nav-link" href="index.html#extras" id="Blog">Extras</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="#" id="Pages">Catálogo</a>
+                  <a class="nav-link" href="index.html#catalogo" id="Pages">Catálogo</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contacto</a>
+                  <a class="nav-link" href="index.html#footer" id="Contact">Contacto</a>
                 </li>
               </ul>
             </div>
@@ -506,21 +498,21 @@
         <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="0">
           <div class="py-5">
             <i class="bi bi-cup-hot icono-servicio"></i>
-            <h4 class="element-title text-capitalize my-3">Té a la mesa</h4>
-            <p class="parrafo">Una experiencia servida con decoración y más.</p>
+            <h4 class="element-title text-capitalize my-3">Evento integral</h4>
+            <p class="parrafo">Nos encargamos de la planificación, coordinación y ejecución del Baby Shower.</p>
           </div>
         </div>
         <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="300">
           <div class="py-5">
             <i class="bi bi-clipboard-check icono-servicio"></i>
             <h4 class="element-title text-capitalize my-3">Sin preocupaciones</h4>
-            <p class="parrafo">Nosotras nos ocupamos de todo para que disfrutes.</p>
+            <p class="parrafo">Nos ocupamos de todo para que solo tengas que disfrutar.</p>
           </div>
         </div>
         <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="600">
           <div class="py-5">
             <i class="bi bi-currency-dollar icono-servicio"></i>
-            <h4 class="element-title text-capitalize my-3">El costo se comparte</h4>
+            <h4 class="element-title text-capitalize my-3">Pensada para compartir</h4>
             <p class="parrafo">Cada invitado paga su té, haciendo la celebración más accesible.</p>
           </div>
         </div>
@@ -528,84 +520,18 @@
           <div class="py-5">
             <i class="bi bi-calendar3 icono-servicio"></i>
             <h4 class="element-title text-capitalize my-3">Disponibilidad</h4>
-            <p class="parrafo">Fines de semana y día de semana (After Baby Shower). En restaurante y a domicilio.</p>
+            <p class="parrafo">Reservá de Lunes a Domingos según la disponibilidad.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="blog py-5" id="extras">
-    <div class="container">
-      <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
-        <h4 class="text-capitalize-custom">Otras experiencias que podés elegir para tu evento</h4>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <article class="post-item">
-            <div class="post-image">
-              <a href="index.html">
-                <img
-                  src="images/propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa/2_propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa.png"
-                  alt="image" class="post-grid-image img-fluid" data-aos="zoom-in">
-              </a>
-            </div>
-            <div class="post-content d-flex flex-wrap gap-2 my-3">
-              <h5 class="post-title text-capitalize-custom titulo_nuevo">
-                Revelación del Género
-              </h5>
-              <p class="parrafo">Transformá uno de los momentos más esperados del embarazo en una experiencia
-                inolvidable. Sumale a tu baby shower, la revelación del género de tu bebé en la torta o globo.</p>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-4">
-          <article class="post-item">
-            <div class="post-image">
-              <a href="index.html">
-                <img
-                  src="images/propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa/3_propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa.png"
-                  alt="image" class="post-grid-image img-fluid" data-aos="zoom-in">
-              </a>
-            </div>
-            <div class="post-content d-flex flex-wrap gap-2 my-3">
-              <h5 class="post-title text-capitalize-custom titulo_nuevo">
-                Baby Shower Creativo
-              </h5>
-              <p class="parrafo">Armamos una experiencia completa a domicilio con decoración, merienda y materiales para
-                personalizar
-                prendas y accesorios del bebé. Una propuesta original para compartir, crear y celebrar.</p>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-4">
-          <article class="post-item">
-            <div class="post-image">
-              <a href="index.html">
-                <img
-                  src="images/propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa/1_propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa.png"
-                  alt="image" class="post-grid-image img-fluid" data-aos="zoom-in">
-              </a>
-            </div>
-            <div class="post-content d-flex flex-wrap gap-2 my-3">
-              <h5 class="post-title text-capitalize-custom titulo_nuevo">
-                Bautismos
-              </h5>
-              <p class="parrafo">
-                Celebrá este momento tan especial sin preocuparte por la organización. Nos encargamos de la decoración,
-                la ambientación y cada detalle para que vos y tu familia puedan disfrutar.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="catalogo" class="new-arrival product-carousel py-5 position-relative overflow-hidden"
+   <section id="catalogo" class="new-arrival product-carousel py-5 position-relative overflow-hidden"
     style="background-color: #eee5de !important;">
     <div class="container">
       <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
-        <h4 class="text-capitalize-custom">Regalos personalizados que podés sumar a tu evento</h4>
+        <h4 class="text-capitalize-custom">Regalos que podés sumar</h4>
       </div>
       <div class="swiper product-swiper open-up" data-aos="zoom-out">
         <div class="swiper-wrapper d-flex">
@@ -686,6 +612,74 @@
       </div>
     </div>
   </section>
+
+  <section class="blog py-5" id="extras">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
+        <h4 class="text-capitalize-custom">Otras experiencias que podés elegir para tu evento</h4>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <article class="post-item">
+            <div class="post-image">
+              <a href="index.html">
+                <img
+                  src="images/propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa/2_propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa.png"
+                  alt="image" class="post-grid-image img-fluid" data-aos="zoom-in">
+              </a>
+            </div>
+            <div class="post-content d-flex flex-wrap gap-2 my-3">
+              <h5 class="post-title text-capitalize-custom titulo_nuevo">
+                Revelación del Género
+              </h5>
+              <p class="parrafo">Transformá uno de los momentos más esperados del embarazo en una experiencia
+                inolvidable. Sumale a tu baby shower, la revelación del género de tu bebé en la torta o globo.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="post-item">
+            <div class="post-image">
+              <a href="index.html">
+                <img
+                  src="images/propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa/3_propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa.png"
+                  alt="image" class="post-grid-image img-fluid" data-aos="zoom-in">
+              </a>
+            </div>
+            <div class="post-content d-flex flex-wrap gap-2 my-3">
+              <h5 class="post-title text-capitalize-custom titulo_nuevo">
+                Baby Shower Creativo
+              </h5>
+              <p class="parrafo">Armamos una experiencia completa a domicilio con decoración, merienda y materiales para
+                personalizar
+                prendas y accesorios del bebé. Una propuesta original para compartir, crear y celebrar.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="post-item">
+            <div class="post-image">
+              <a href="index.html">
+                <img
+                  src="images/propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa/1_propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa.png"
+                  alt="image" class="post-grid-image img-fluid" data-aos="zoom-in">
+              </a>
+            </div>
+            <div class="post-content d-flex flex-wrap gap-2 my-3">
+              <h5 class="post-title text-capitalize-custom titulo_nuevo">
+                Bautismos
+              </h5>
+              <p class="parrafo">
+                Celebrá este momento tan especial sin preocuparte por la organización. Nos encargamos de la decoración,
+                la ambientación y cada detalle para que vos y tu familia puedan disfrutar.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
 
   <footer id="footer" class="mt-5">
     <div class="container">
@@ -915,34 +909,45 @@
       });
     });
   </script>
+  <script>
+    (function() {
+      var offcanvasEl = document.getElementById('offcanvasNavbar');
+      if (!offcanvasEl) return;
+      var links = offcanvasEl.querySelectorAll('.nav-link');
+      links.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          var href = link.getAttribute('href') || '';
+          var hashIndex = href.indexOf('#');
+          if (hashIndex === -1) return; // not an anchor
+          var hash = href.substring(hashIndex);
+          var target = document.querySelector(hash);
+          if (!target) return; // allow default if target not on page
+          e.preventDefault();
+          var bsOff = bootstrap.Offcanvas.getInstance(offcanvasEl) || new bootstrap.Offcanvas(offcanvasEl);
+          var onHidden = function() {
+            offcanvasEl.removeEventListener('hidden.bs.offcanvas', onHidden);
+            if (history && history.replaceState) {
+              history.replaceState(null, '', hash);
+            } else {
+              location.hash = hash;
+            }
+            // Scroll so the navbar remains visible at top
+            var navEl = document.querySelector('.navbar');
+            var navHeight = navEl ? Math.ceil(navEl.getBoundingClientRect().height) : 0;
+            var targetTop = Math.max(0, target.getBoundingClientRect().top + window.pageYOffset - navHeight - 8);
+            window.scrollTo({ top: targetTop, behavior: 'smooth' });
+          };
+          offcanvasEl.addEventListener('hidden.bs.offcanvas', onHidden);
+          bsOff.hide();
+        });
+      });
+    })();
+  </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
   AOS.init();
 </script>
-  <script>
-    (function() {
-      // Inicializar paginación en #catalogo solo si no está ya inicializado
-      var el = document.querySelector('#catalogo .product-swiper');
-      if (!el) return;
-      // Swiper añade la propiedad `swiper` al elemento una vez inicializado
-      if (el.swiper) return;
-      // Inicializa Swiper con paginación (bullets)
-      var catalogSwiper = new Swiper('#catalogo .product-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 12,
-        centeredSlides: false,
-        breakpoints: {
-          768: {
-            slidesPerView: 'auto'
-          }
-        },
-        pagination: {
-          el: '#catalogo .swiper-pagination',
-          clickable: true
-        }
-      });
-    })();
-  </script>
+ 
 </body>
 
 </html>

@@ -192,6 +192,22 @@ a {
     text-align: center;
     width: 100%;
   }
+  /* Center the service section heading on small screens */
+  #service .d-flex {
+    justify-content: center !important;
+  }
+  #service .d-flex h4 {
+    text-align: center;
+    width: 100%;
+  }
+  /* Center the extras/blog section heading on small screens */
+  #extras .d-flex {
+    justify-content: center !important;
+  }
+  #extras .d-flex h4 {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .main-gallery-overlay {
