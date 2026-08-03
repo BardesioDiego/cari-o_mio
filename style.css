@@ -1773,7 +1773,7 @@ a.btn-link.text-light:after {
 .wpp-float {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  right: 20px;
   background: #25D366;
   color: white;
   width: 50px;
