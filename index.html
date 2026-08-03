@@ -342,6 +342,20 @@
         <div class="swiper-wrapper d-flex">
           <div class="swiper-slide">
             <div class="product-item image-zoom-effect link-effect">
+              <div class="image-holder position-relative">
+                  <img
+                    src="images/propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa (1)/decoracion_de_mesa_principal_acorde_al_evento_propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa.png"
+                    alt="categories" class="product-image img-fluid">
+                <div class="product-content">
+                  <h5 class="text-capitalize-custom fs-5 mt-3">
+                    <p>Mesa principal decorada</p>
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-item image-zoom-effect link-effect">
               <div class="image-holder position-relative">              
                   <img
                     src="images/propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa (1)/souvenirs_propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa.png"
@@ -362,7 +376,7 @@
                     alt="categories" class="product-image img-fluid">
                 <div class="product-content">
                   <h5 class="text-capitalize-custom fs-5 mt-3">
-                    <p>Torta de merengue rellena de dulce de leche</p>
+                    <p>Torta decorada rellena de dulce de leche</p>
                   </h5>
                 </div>
               </div>
@@ -390,7 +404,7 @@
                     alt="categories" class="product-image img-fluid">
                 <div class="product-content">
                   <h5 class="text-capitalize-custom fs-5 mt-3">
-                    <p>Té a la mesa</p>
+                    <p>Merienda</p>
                   </h5>
                 </div>
               </div>
@@ -418,21 +432,7 @@
                     alt="categories" class="product-image img-fluid">
                 <div class="product-content">
                   <h5 class="text-capitalize-custom fs-5 mt-3">
-                    <p>Juegos impresos</p>
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder position-relative">
-                  <img
-                    src="images/propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa (1)/decoracion_de_mesa_principal_acorde_al_evento_propuesta_integral_baby_shower_carino_mio_montevideo_ciudad_de_la_costa.png"
-                    alt="categories" class="product-image img-fluid">
-                <div class="product-content">
-                  <h5 class="text-capitalize-custom fs-5 mt-3">
-                    <p>Mesa principal decorada</p>
+                    <p>Juegos impresos y cajita de los deseos</p>
                   </h5>
                 </div>
               </div>
@@ -446,7 +446,7 @@
                     alt="categories" class="product-image img-fluid">
                 <div class="product-content">
                   <h5 class="text-capitalize-custom fs-5 mt-3">
-                    <p>Porta retrato personalizado </p>
+                    <p>Portarretrato personalizado</p>
                   </h5>
                 </div>
               </div>
@@ -460,7 +460,7 @@
                     alt="categories" class="product-image img-fluid">
                 <div class="product-content">
                   <h5 class="text-capitalize-custom fs-5 mt-3">
-                    <p>8 cup cakes o donas</p>
+                    <p>Cup cakes</p>
                   </h5>
                 </div>
               </div>
@@ -774,16 +774,29 @@
   </div>
   <script>
     jQuery(function($) {
-      var galleryItems = $('.main-gallery-item');
+      // billboard anchors (keep inert)
+      var billboardItems = $('#billboard .main-gallery-item');
+      // service images will open the gallery
+      var serviceImages = $('#service .product-image');
       var currentIndex = 0;
-      var urls = galleryItems.map(function() {
-        return $(this).attr('href');
+      var urls = serviceImages.map(function() {
+        return $(this).attr('src');
+      }).get();
+      var titles = serviceImages.map(function() {
+        var $item = $(this).closest('.product-item');
+        var title = $item.find('.product-content h5 p').first().text().trim();
+        if (!title) {
+          // fallback to alt or filename
+          title = $(this).attr('alt') || ($(this).attr('src') || '').split('/').pop();
+        }
+        return title;
       }).get();
 
       function updateGallery() {
         var src = urls[currentIndex];
         $('.main-gallery-image').attr('src', src);
-        $('.main-gallery-counter').text('Imagen ' + (currentIndex + 1) + ' de ' + urls.length);
+        var label = titles[currentIndex] || ('Imagen ' + (currentIndex + 1) + ' de ' + urls.length);
+        $('.main-gallery-counter').text(label);
       }
 
       function showGallery(index) {
@@ -797,15 +810,40 @@
       }
 
       function initMainGallery() {
-        galleryItems.off('click.mainGallery').on('click.mainGallery', function(e) {
-          if ($(window).width() <= 767.98) {
-            e.preventDefault();
-            var href = $(this).attr('href');
-            currentIndex = urls.indexOf(href);
-            if (currentIndex === -1) {
-              currentIndex = 0;
+        // disable default behavior on billboard anchors (no zoom)
+        billboardItems.off('click.mainGallery').on('click.mainGallery', function(e) {
+          e.preventDefault();
+        });
+
+        // bind clicks on service images to open the overlay
+        serviceImages.off('click.mainGallery').on('click.mainGallery', function(e) {
+          e.preventDefault && e.preventDefault();
+          var src = $(this).attr('src');
+          currentIndex = urls.indexOf(src);
+          if (currentIndex === -1) currentIndex = 0;
+          showGallery(currentIndex);
+        });
+
+        // touch swipe support for overlay
+        var touchStartX = 0;
+        var touchEndX = 0;
+        var swipeThreshold = 40;
+
+        $('#main-gallery-overlay .main-gallery-frame').off('touchstart.mainGallery touchend.mainGallery').on('touchstart.mainGallery', function(e) {
+          touchStartX = e.originalEvent.touches[0].clientX;
+        }).on('touchend.mainGallery', function(e) {
+          touchEndX = e.originalEvent.changedTouches[0].clientX;
+          var diff = touchEndX - touchStartX;
+          if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+              // swipe right -> previous
+              currentIndex = (currentIndex - 1 + urls.length) % urls.length;
+              updateGallery();
+            } else {
+              // swipe left -> next
+              currentIndex = (currentIndex + 1) % urls.length;
+              updateGallery();
             }
-            showGallery(currentIndex);
           }
         });
       }
