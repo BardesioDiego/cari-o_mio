@@ -22,6 +22,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    /* Mostrar paginación solo en móviles para la sección catálogo */
+    #catalogo .swiper-pagination { display: none; }
+    @media (max-width: 767.98px) {
+      #catalogo .swiper-pagination { display: block; text-align: center; margin-top: 12px; }
+      #catalogo .swiper-pagination .swiper-pagination-bullet { background: rgba(0,0,0,0.6); }
+    }
+  </style>
 </head>
 
 <body class="homepage">
@@ -793,13 +801,28 @@
       }).get();
 
       function updateGallery() {
-        var src = urls[currentIndex];
+        if (!urls || urls.length === 0) {
+          $('.main-gallery-image').attr('src', '');
+          $('.main-gallery-counter').text('Imagen no disponible');
+          $('.main-gallery-prev, .main-gallery-next').hide();
+          return;
+        }
+        // ensure currentIndex is integer within range
+        currentIndex = ((currentIndex % urls.length) + urls.length) % urls.length;
+        var src = urls[currentIndex] || '';
         $('.main-gallery-image').attr('src', src);
         var label = titles[currentIndex] || ('Imagen ' + (currentIndex + 1) + ' de ' + urls.length);
         $('.main-gallery-counter').text(label);
+        // show/hide nav depending on number of items
+        if (urls.length > 1) {
+          $('.main-gallery-prev, .main-gallery-next').show();
+        } else {
+          $('.main-gallery-prev, .main-gallery-next').hide();
+        }
       }
 
       function showGallery(index) {
+        if (!urls || urls.length === 0) return;
         currentIndex = index >= 0 ? index : 0;
         updateGallery();
         $('#main-gallery-overlay').addClass('open').attr('aria-hidden', 'false');
@@ -850,12 +873,19 @@
 
       $('.main-gallery-close').on('click', hideGallery);
       $('.main-gallery-prev').on('click', function() {
+        if (!urls || urls.length <= 1) return;
         currentIndex = (currentIndex - 1 + urls.length) % urls.length;
         updateGallery();
       });
       $('.main-gallery-next').on('click', function() {
+        if (!urls || urls.length <= 1) return;
         currentIndex = (currentIndex + 1) % urls.length;
         updateGallery();
+      });
+      // image load error fallback to avoid blank screen
+      $('.main-gallery-image').on('error', function() {
+        $(this).attr('src', '');
+        $('.main-gallery-counter').text('Imagen no disponible');
       });
       $('#main-gallery-overlay').on('click', function(e) {
         if (e.target.id === 'main-gallery-overlay') {
@@ -889,6 +919,30 @@
   <script>
   AOS.init();
 </script>
+  <script>
+    (function() {
+      // Inicializar paginación en #catalogo solo si no está ya inicializado
+      var el = document.querySelector('#catalogo .product-swiper');
+      if (!el) return;
+      // Swiper añade la propiedad `swiper` al elemento una vez inicializado
+      if (el.swiper) return;
+      // Inicializa Swiper con paginación (bullets)
+      var catalogSwiper = new Swiper('#catalogo .product-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 12,
+        centeredSlides: false,
+        breakpoints: {
+          768: {
+            slidesPerView: 'auto'
+          }
+        },
+        pagination: {
+          el: '#catalogo .swiper-pagination',
+          clickable: true
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>
