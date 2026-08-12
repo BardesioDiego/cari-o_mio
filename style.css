@@ -112,6 +112,20 @@ h6 {
   font-size: 45px;
 }
 
+
+@media (max-width: 768px) {
+  .title-compact {
+    font-size: 32px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .title-compact {
+    font-size: 26px;
+  }
+}
+
 .text-capitalize-custom {
   text-transform: lowercase;
 }
@@ -137,6 +151,20 @@ h2,
 h3,
 .h3 {
   font-size: 2.8rem;
+}
+
+@media (max-width: 768px) {
+  h3,
+  .h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h3,
+  .h3 {
+    font-size: 1.6rem;
+  }
 }
 
 h4,
@@ -1056,6 +1084,43 @@ a {
     font-size: 0.85rem;
     margin-top: 0.75rem;
     letter-spacing: 0.02em;
+  }
+
+  /* Main swiper: apilar slides en móvil, sin carrusel */
+  .main-swiper {
+    overflow: visible !important;
+    min-height: auto !important;
+  }
+  .main-swiper .swiper-wrapper {
+    display: block !important;
+    flex-wrap: wrap !important;
+    transform: none !important;
+    transition: none !important;
+    height: auto !important;
+  }
+  .main-swiper .swiper-slide {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 auto !important;
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin: 0 0 1.5rem !important;
+    opacity: 1 !important;
+  }
+  .main-swiper .swiper-slide:last-child {
+    margin-bottom: 0 !important;
+  }
+  .main-swiper .swiper-slide .banner-item,
+  .main-swiper .swiper-slide .banner-item .image-holder,
+  .main-swiper .swiper-slide .banner-content {
+    width: 100% !important;
+  }
+  .main-swiper .swiper-pagination,
+  .main-swiper .icon-arrow {
+    display: none !important;
   }
 }
 
