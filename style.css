@@ -1030,12 +1030,12 @@ a {
   position: absolute;
   top: 50%;
   font-size: 2em;
-  color: var(--dark-color);
+  color: #52301a;
   z-index: 8;
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  border: 1px solid #d9d9d9;
+  border: 2px solid #52301a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1122,6 +1122,16 @@ a {
   .main-swiper .icon-arrow {
     display: none !important;
   }
+}
+
+#catalogo .product-swiper {
+  overflow: visible;
+}
+#catalogo .product-swiper .swiper-slide {
+  max-width: none;
+}
+#catalogo .product-swiper .swiper-slide .product-item {
+  min-height: auto;
 }
 
 /** Swiper Slide Arrows 2
