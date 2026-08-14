@@ -275,7 +275,7 @@ a {
 .main-gallery-btn {
   position: absolute;
   border: none;
-  background: rgba(255, 255, 255, 0.12);
+  background: #52301ac9;
   color: #fff;
   width: 3rem;
   height: 3rem;
@@ -1056,9 +1056,31 @@ a {
   right: 30px;
 }
 
+/* Flechas sutiles para el carrusel de propuesta integral */
+#service .icon-arrow {
+  width: 45px;
+  height: 45px;
+  font-size: 1.1em;
+  border: 1.5px solid #52301a;
+  opacity: 0.4;
+}
+
+#service .icon-arrow:hover {
+  opacity: 1;
+}
+
+#service .icon-arrow.icon-arrow-left {
+  left: 10px;
+}
+
+#service .icon-arrow.icon-arrow-right {
+  right: 10px;
+}
+
 @media (max-width: 991px) {
-  .icon-arrow.icon-arrow-left,
-  .icon-arrow.icon-arrow-right {
+  /* Ocultar flechas del main-swiper */
+  .slideshow .icon-arrow.icon-arrow-left,
+  .slideshow .icon-arrow.icon-arrow-right {
     display: none;
   }
   .swiper-pagination {
@@ -1121,6 +1143,17 @@ a {
   .main-swiper .swiper-pagination,
   .main-swiper .icon-arrow {
     display: none !important;
+  }
+
+  /* Product carousel para móvil */
+  #service {
+    position: relative;
+  }
+  
+  #service .swiper-pagination {
+    position: relative;
+    margin-top: 1.5rem;
+    bottom: auto !important;
   }
 }
 
@@ -1891,4 +1924,15 @@ a.btn-link.text-light:after {
   0% { transform: scale(1); }
   50% { transform: scale(1.3); }
   100% { transform: scale(1); }
+}
+
+/* Asegura que el slide ocupe el 100% disponible en móvil */
+.propuesta-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.propuesta-swiper .product-item {
+  width: 100%;
 }
