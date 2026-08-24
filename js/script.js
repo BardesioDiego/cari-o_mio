@@ -35,3 +35,33 @@ const propuestaSwiper = new Swiper('.propuesta-swiper .product-swiper', {
     }
   }
 });
+document.addEventListener('DOMContentLoaded', () => {
+      function initSwiper() {
+        document.querySelectorAll('.init-swiper').forEach((swiperElement) => {
+          let config = {
+            loop: true,
+            speed: 600,
+            autoplay: { delay: 5000 },
+            slidesPerView: "auto",
+            pagination: {
+              el: ".swiper-pagination",
+              type: "bullets",
+              clickable: true
+            }
+          };
+
+          const configScript = swiperElement.querySelector('.swiper-config');
+          if (configScript) {
+            try {
+              config = JSON.parse(configScript.innerHTML.trim());
+            } catch (error) {
+              console.error("Error al parsear el JSON de Swiper:", error);
+            }
+          }
+
+          new Swiper(swiperElement, config);
+        });
+      }
+
+      window.addEventListener('load', initSwiper);
+    });
