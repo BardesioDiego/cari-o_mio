@@ -1940,11 +1940,15 @@ a.btn-link.text-light:after {
 .testimonials .info h3 {
   font-weight: 700;
   font-size: 30px;
+  color: #52301a !important;
 }
 
+.p_test{
+  color: #52301a !important;
+}
 .testimonials .swiper {
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
-  background-color: var(--surface-color);
+  box-shadow: 0 15px 30px 0 rgba(243, 47, 171, 0.05);
+  background-color: #d88c9a;
 }
 
 .testimonials .testimonials-carousel,
@@ -1971,10 +1975,11 @@ a.btn-link.text-light:after {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
+   color: #ffffff;
 }
 
 .testimonials .testimonial-item h4 {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: #ffffff;
   font-size: 14px;
   margin: 0;
 }
@@ -1984,7 +1989,7 @@ a.btn-link.text-light:after {
 }
 
 .testimonials .testimonial-item .stars i {
-  color: #ffc107;
+  color: #ffffff;
   margin: 0 1px;
 }
 
@@ -2036,6 +2041,48 @@ a.btn-link.text-light:after {
   background-color: var(--accent-color);
 }
 
+/* Estilos para el carrusel de testimonios */
+#testimonials .swiper {
+  width: 100%;
+  padding-bottom: 40px; /* Espacio para los puntos de paginación */
+}
+
+#testimonials .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+#testimonials .testimonial-item {
+  background-color: #d88c9a;/* Fondo oscuro para contrastar con text-white */
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+}
+
+#testimonials .testimonial-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+#testimonials .stars {
+  color: #ffc107; /* Color dorado para las estrellas */
+  margin-top: 5px;
+}
+
+#testimonials .title_test {
+  color: #52301a;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#testimonials .p_test {
+  color: #52301a;
+  font-size: 1.1rem;
+}
+
 @media (max-width: 767px) {
 
   .testimonials .testimonials-carousel,
@@ -2074,4 +2121,27 @@ a.btn-link.text-light:after {
     margin-right: 0;
     margin-bottom: 10px;
   }
+}
+
+/* Espaciado del contenedor para dar lugar a los puntos */
+#testimonials .swiper {
+  padding-bottom: 35px;
+}
+
+/* Color e imagen de los puntos de paginación inactivos */
+#testimonials .swiper-pagination-bullet {
+  background-color: #ffffff;
+  opacity: 0.5;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+}
+
+/* Estado del punto activo (comentario visible) */
+#testimonials .swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #ffffff;
+  width: 24px; /* Forma alargada para resaltar el testimonio actual */
+  border-radius: 5px;
 }
